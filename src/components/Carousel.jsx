@@ -46,8 +46,8 @@ const Carousel = () => {
     );
 
   return (
-    <section className="max-w-6xl m-auto w-full min-h-screen flex flex-col justify-center items-center">
-      <div className="relative w-full h-[500px] overflow-hidden">
+    <section className="max-w-6xl m-auto w-full min-h-screen flex flex-col justify-center items-center px-8 lg:px-0">
+      <div className="relative w-full h-[500px] overflow-hidden mt-32 md:mt-0">
         {loading ? (
           <div className="flex justify-center items-center h-full">
             <ClipLoader color="#000000" loading={loading} size={50} />
@@ -78,18 +78,18 @@ const Carousel = () => {
         )}
       </div>
 
-      <div className="flex justify-end items-center gap-4 mt-4 w-full">
+      <div className="flex justify-center md:justify-end items-center gap-4 mt-8 w-full">
         <button
-          className="border border-black p-2 text-black rounded-full transition-all duration-500 hover:bg-black hover:text-white"
+          className="border border-black p-3 text-black rounded-full transition-all duration-500 hover:bg-black hover:text-white sm:p-2"
           onClick={prevSlide}
         >
-          <MdOutlineKeyboardArrowLeft />
+          <MdOutlineKeyboardArrowLeft className="w-3 h-3 sm:w-5 sm:h-5" />
         </button>
         <button
-          className="border border-black p-2 text-black rounded-full transition-all duration-500 hover:bg-black hover:text-white"
+          className="border border-black p-3 text-black rounded-full transition-all duration-500 hover:bg-black hover:text-white sm:p-2"
           onClick={nextSlide}
         >
-          <MdOutlineKeyboardArrowRight />
+          <MdOutlineKeyboardArrowRight className="w-3 h-3 sm:w-5 sm:h-5" />
         </button>
       </div>
     </section>

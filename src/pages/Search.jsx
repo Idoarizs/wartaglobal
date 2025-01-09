@@ -36,18 +36,19 @@ const Search = () => {
           <ClipLoader color="#000000" loading={loading} size={50} />
         </div>
       ) : (
-        <div className="flex flex-col gap-8 py-16 my-16">
+        <div className="flex flex-col gap-8 my-32 px-8 lg:px-0">
           {!news.length ? (
-            <div className="flex flex-col justify-center items-center">
-              <h1 className="text-xl font-bold">Berita Tidak Tersedia</h1>
-              <p className="font-thin">
+            <div className="flex flex-col justify-center items-center text-center px-4">
+              <h1 className="text-lg sm:text-xl font-bold">
+                Berita Tidak Tersedia
+              </h1>
+              <p className="font-thin text-sm sm:text-base">
                 Silakan telusuri kategori lain untuk menemukan berita yang
                 menarik.
               </p>
             </div>
           ) : (
             <>
-              {" "}
               <NewsCard news={paginatedNews} />
               <Pagination
                 currentPage={currentPage}

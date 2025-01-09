@@ -6,7 +6,7 @@ import { formatDate } from "../../utils";
 
 const NewsCard = ({ news }) => {
   return (
-    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
       {news.map((item) => (
         <div key={item.id} className="border rounded-lg overflow-hidden">
           <img src={item.thumbnail} alt={item.title} className="w-full h-52" />
