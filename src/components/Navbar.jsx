@@ -76,7 +76,7 @@ const Navbar = () => {
 
           <Link
             className={`hidden xl:flex p-2 rounded-full transition-all duration-300 ${
-              isScrolled ? "bg-white text-blue-500" : "bg-blue-500 text-white"
+              isScrolled ? "bg-white text-blue-500" : "bg-red-500 text-white"
             }`}
             to={`/berita/pencarian?q=${encodeURIComponent(search)}`}
           >
